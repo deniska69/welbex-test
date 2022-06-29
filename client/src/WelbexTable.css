@@ -1,0 +1,30 @@
+.titleWelbex,
+.headerWelbex,
+.footerWelbex,
+.tableWelbex {
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-top: 2vw;
+  width: 96vw;
+}
+
+.headerWelbex {
+  height: 8vh;
+  background-color: #fff;
+}
+
+.footerWelbex {
+  height: 8vh;
+  background-color: #fff;
+}
+
+.tableWelbex {
+  min-height: 8vh;
+  background-color: #fff;
+}
+
+._shadow {
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(133, 179, 255, 0.23);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(133, 179, 255, 0.23);
+  box-shadow: 0px 0px 15px 0px rgba(133, 179, 255, 0.23);
+}
