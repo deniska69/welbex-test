@@ -1,11 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import WelbexTable from "./WelbexTable";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import Welbex from './Welbex'
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <WelbexTable />
+    <Welbex />
   </React.StrictMode>
-);
+)

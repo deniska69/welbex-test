@@ -3,3 +3,21 @@ body {
   padding: 0;
   background-color: #f7f9ff;
 }
+
+@media (min-width: 1199px) {
+  body {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 1299px) {
+  body {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1899px) {
+  body {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,45 @@
+.tableWelbex {
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-top: 1vw;
+  width: 62vw;
+  padding: 1vw;
+  min-height: 8vh;
+  background-color: #fff;
+}
+
+table {
+  min-width: 60vw;
+  border-collapse: separate;
+  border-spacing: 0 0.5vw;
+  line-height: 2.5;
+}
+
+tr:hover {
+  color: #fff;
+  background: #4173ea;
+}
+
+thead tr:hover {
+  color: #000;
+  background: #fff;
+}
+
+td,
+th {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  min-height: 4vw;
+}
+
+td:first-child {
+  border-left-style: solid;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+td:last-child {
+  border-right-style: solid;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}

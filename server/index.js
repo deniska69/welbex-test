@@ -1,11 +1,12 @@
 const express = require("express"); //Импортиурем Express для создания сервера
 const welbexRouter = require("./routes/welbex.routes"); //Импортируем ротер для обработки запросов
-
+const corsMiddleware = require("./middleware/cors.middleware"); //Импортируем CORS-конфиг
 const PORT = process.env.PORT || 8080; //Указываем порт для сервера из переменной окружения (в случае отсутствия использовать явно указанный пот 8080)
 const app = express(); //Из Експресса создаём сервер
 
 app.use(express.json()); //Явно указываем серверу парсить JSON-строку
-app.use("/api", welbexRouter);
+app.use(corsMiddleware); //Передаём серверу CORS-конфиг
+app.use("/api", welbexRouter); //Передаём серверу роутер
 
 //Функция для подключения к базе данных и запуска сервера
 const start = async () => {
