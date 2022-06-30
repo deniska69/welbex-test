@@ -3,16 +3,22 @@ import { getDataWelbex } from './actions/welbex'
 import './Welbex.css'
 
 import Table from './components/Table'
+import Pagination from './components/Pagination'
 
 const Welbex = () => {
-  // eslint-disable-next-line
   const [data, setData] = useState([]) //Данные из БД
+  const [isLoading, setIsLoading] = useState(false) //Статус загрузки данных из БД
   // eslint-disable-next-line
-  const [isLoading, setIsLoading] = useState(false)
-  // eslint-disable-next-line
-  const [currentPage, setCurrentPage] = useState(1) //Данные из БД
-  // eslint-disable-next-line
+  const [currentPageIndex, setCurrentPageIndex] = useState(1) //Индекс текущей страницы
   const countOfRowsPerPage = 10 //Количество строк на странице
+
+  const lastRowIndex = currentPageIndex * countOfRowsPerPage //Индекс последней строки на странице
+  const firstRowIndex = lastRowIndex - countOfRowsPerPage //Индекс первой строки на странице
+  const currentRows = data.slice(firstRowIndex, lastRowIndex) //Строки на текущей странице
+
+  const paginate = pageIndex => {
+    setCurrentPageIndex(pageIndex)
+  }
 
   //Функция загрузки данных из БД
   useEffect(() => {
@@ -39,10 +45,11 @@ const Welbex = () => {
           <h4>Загрузка данных...</h4>
         </div>
       ) : (
-        <Table data={data} isLoading={isLoading} />
+        <Table data={currentRows} isLoading={isLoading} />
       )}
+      {!isLoading && <Pagination countOfRowsPerPage={countOfRowsPerPage} totalRows={data.length} paginate={paginate} currentPageIndex={currentPageIndex} />}
       {/* <div className="headerWelbex _shadow"></div>
-      <div className="footerWelbex _shadow"></div> */}
+       */}
     </div>
   )
 }

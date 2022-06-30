@@ -5,8 +5,7 @@
 }
 
 .titleWelbex,
-.headerWelbex,
-.footerWelbex {
+.headerWelbex {
   margin-left: 2vw;
   margin-right: 2vw;
   margin-top: 1vw;
@@ -14,11 +13,6 @@
 }
 
 .headerWelbex {
-  height: 8vh;
-  background-color: #fff;
-}
-
-.footerWelbex {
   height: 8vh;
   background-color: #fff;
 }

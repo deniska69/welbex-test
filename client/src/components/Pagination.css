@@ -1,0 +1,15 @@
+.paginationWelbex {
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  width: 62vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginationWelbex {
+  height: 8vh;
+  background-color: #fff;
+}
