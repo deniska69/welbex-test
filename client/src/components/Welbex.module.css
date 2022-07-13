@@ -1,0 +1,16 @@
+@media (max-width: 1024px) {
+    .Welbex{
+        width: 100%;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 2vw;
+    }
+}
+
+@media (min-width: 1025px) {
+    .Welbex{
+        padding-left: 20vw;
+        padding-right: 20vw;   
+        padding-top: 1vw;     
+    }
+}
