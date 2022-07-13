@@ -1,30 +1,30 @@
-import React, { useEffect, useState } from 'react'
-import { getDataWelbex } from './actions/welbex'
-import './Welbex.css'
+import React, { useEffect, useState } from 'react';
+import { getDataWelbex } from '../actions/welbex';
+import './Welbex.css';
 
-import Filter from './components/Filter'
-import Table from './components/Table'
-import Pagination from './components/Pagination'
+import Filter from './ui/Filter/Filter';
+import Table from './ui/Table/Table';
+import Pagination from './ui/Pagination/Pagination';
 
 const Welbex = () => {
-  const [dataInput, setDataInput] = useState([]) //Данные из БД
-  const [dataOutput, setDataOutput] = useState([]) //Данные из БД
-  const [isLoading, setIsLoading] = useState(false) //Статус загрузки данных из БД
-  const [currentPageIndex, setCurrentPageIndex] = useState(1) //Индекс текущей страницы
-  const countOfRowsPerPage = 10 //Количество строк на странице
+  const [dataInput, setDataInput] = useState([]); //Данные из БД
+  const [dataOutput, setDataOutput] = useState([]); //Данные из БД
+  const [isLoading, setIsLoading] = useState(false); //Статус загрузки данных из БД
+  const [currentPageIndex, setCurrentPageIndex] = useState(1); //Индекс текущей страницы
+  const countOfRowsPerPage = 10; //Количество строк на странице
 
-  const lastRowIndex = currentPageIndex * countOfRowsPerPage //Индекс последней строки на странице
-  const firstRowIndex = lastRowIndex - countOfRowsPerPage //Индекс первой строки на странице
-  const currentRows = dataOutput.slice(firstRowIndex, lastRowIndex) //Строки на текущей странице
+  const lastRowIndex = currentPageIndex * countOfRowsPerPage; //Индекс последней строки на странице
+  const firstRowIndex = lastRowIndex - countOfRowsPerPage; //Индекс первой строки на странице
+  const currentRows = dataOutput.slice(firstRowIndex, lastRowIndex); //Строки на текущей странице
 
-  const [filterColumn, setFilterColumn] = useState('')
-  const [filterCondition, setFilterCondition] = useState('')
-  const [filterValue, setFilterValue] = useState('')
+  const [filterColumn, setFilterColumn] = useState('');
+  const [filterCondition, setFilterCondition] = useState('');
+  const [filterValue, setFilterValue] = useState('');
 
   //Функция для пагинации страниц
   const paginate = pageIndex => {
     setCurrentPageIndex(pageIndex)
-  }
+  };
 
   //Хук для загрузки данных из БД
   useEffect(() => {
@@ -43,12 +43,12 @@ const Welbex = () => {
     // setFilterCondition('Условие')
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []);
 
   useEffect(() => {
     filter()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filterColumn, filterColumn, filterValue])
+  }, [filterColumn, filterColumn, filterValue]);
 
   // //Хук для отслеживания изменений в стейтах
   // useEffect(() => {
@@ -112,7 +112,7 @@ const Welbex = () => {
     } else {
       //setDataOutput(dataInput)
     }
-  }
+  };
 
   return (
     <div className="welbex">
@@ -139,7 +139,7 @@ const Welbex = () => {
       )}
       {!isLoading && <Pagination countOfRowsPerPage={countOfRowsPerPage} totalRows={dataOutput.length} paginate={paginate} currentPageIndex={currentPageIndex} />}
     </div>
-  )
-}
+  );
+};
 
-export default Welbex
+export default Welbex;
