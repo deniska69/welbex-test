@@ -9,7 +9,7 @@ const Table = ({ data }) => {
             <th>Дата</th>
             <th>Название</th>
             <th>Количество</th>
-            <th>Расстояние</th>
+            <th>Растояние</th>
           </tr>
         </thead>
         <tbody>

@@ -4,17 +4,11 @@
   align-items: center;
 }
 
-.titleWelbex,
-.headerWelbex {
+.titleWelbex {
   margin-left: 2vw;
   margin-right: 2vw;
   margin-top: 1vw;
   width: 62vw;
-}
-
-.headerWelbex {
-  height: 8vh;
-  background-color: #fff;
 }
 
 ._shadow {

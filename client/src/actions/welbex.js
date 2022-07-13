@@ -1,5 +1,5 @@
 import axios from 'axios' //Импортируем Axios для выполнения HTTP-запросов
-const API_URL = 'http://localhost:8080/' //URL Back-сервера
+import { API_URL } from '../core/config'; //URL Back-сервера
 
 //Функция получения данных из БД
 export const getDataWelbex = async () => {

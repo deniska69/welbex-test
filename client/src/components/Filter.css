@@ -1,0 +1,26 @@
+.filterWelbex {
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-top: 1vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  width: 62vw;
+  height: 8vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.filterText {
+  margin-right: 1vw;
+  margin-bottom: 0;
+}
+
+.filterBtn {
+  margin-right: 1vw;
+  border-color: #fff;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}

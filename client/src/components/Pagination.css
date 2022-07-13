@@ -7,9 +7,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.paginationWelbex {
   height: 8vh;
   background-color: #fff;
 }
